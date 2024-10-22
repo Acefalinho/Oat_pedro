@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Consulta de DDD ATIVIDADE</title>
+
+<!--link de css -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card custom-card shadow-lg">
+      <div class="card-body p-5">
+        <h1 class="text-center mb-4 display-6 fw-bold">Consulta de DDD</h1>
+        <p class="text-center text-muted mb-5">Insira o DDD para visualizar as cidades e o estado correspondente.</p>
+        <form id="dddForm" class="needs-validation" novalidate>
+          <div class="input-group mb-4">
+            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+            <input type="number" class="form-control form-control-lg rounded-pill" id="dddInput" placeholder="Ex: 11" min="11" max="99" required>
+            <div class="invalid-feedback">
+              Por favor, insira um DDD válido (entre 11 e 99).
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 btn-lg shadow-sm rounded-pill">Consultar <i class="fas fa-search ms-2"></i></button>
+        </form>
+        <div id="result" class="mt-4">
+          <div class="alert alert-info loading d-none text-center">Buscando <i class="fas fa-spinner fa-spin"></i></div>
+          <div id="dddInfo" class="d-none">
+            <p class="mt-4"><strong>Estado:</strong> <span id="state"></span></p>
+            <p><strong>Cidades:</strong></p>
+            <ul id="citiesList" class="list-group list-group-flush"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--link do bootstrap-->
+  <script src="funções.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

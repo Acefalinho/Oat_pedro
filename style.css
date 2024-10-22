@@ -1,0 +1,56 @@
+body {
+    background: linear-gradient(135deg, #6b73ff, #000dff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .container {
+    max-width: 500px;
+  }
+  
+  .custom-card {
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  
+  input:focus, button:focus {
+    box-shadow: none !important;
+  }
+  
+  h1 {
+    color: #343a40;
+  }
+  
+  .btn-primary {
+    background-color: #6b73ff;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #000dff;
+  }
+  
+  .loading {
+    color: #6b73ff;
+  }
+  
+  input {
+    transition: box-shadow 0.2s ease;
+  }
+  
+  input:focus {
+    box-shadow: 0 0 10px rgba(107, 115, 255, 0.5);
+  }
+  
+  .invalid-feedback {
+    display: none;
+  }
+  
+  input:invalid ~ .invalid-feedback {
+    display: block;
+  }
+  
